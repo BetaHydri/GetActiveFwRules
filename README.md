@@ -1,5 +1,5 @@
 # GetActiveFwRules
-Description: Get all Windows Firewall rules that are active due to the active connection profiles
+Description: Get all Windows Firewall rules that are active due to the actual active network connection profiles
 
 ---
 ## Sample usage:
