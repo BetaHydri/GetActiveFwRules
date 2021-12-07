@@ -91,7 +91,7 @@ Function Get-ActiveFirewallRules {
     @{Name = 'RemotePort'; Expression = { ($PSItem | Get-NetFirewallPortFilter).RemotePort } },
     @{Name = 'RemoteAddress'; Expression = { ($PSItem | Get-NetFirewallAddressFilter).RemoteAddress } }#,
     #@{Name = 'Program'; Expression = { ($PSItem | Get-NetFirewallApplicationFilter).AppPath } }
-    return ($($ActiveRules | Sort-Object  -Unique Name, Profile, Direction))
+    return ($($ActiveRules | Sort-Object  -Unique Name, Direction, Profiles, Action, Protocol, LocalPort, RemotePort, RemoteAddress))
 }
 #endregion
 
