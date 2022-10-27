@@ -69,7 +69,7 @@ Function Get-ConnectionProfiles {
             $MyActiveProfiles += $Profile
         }
     }
-    return $MyActiveProfiles
+    return $MyActiveProfiles = $MyActiveProfiles | Select-Object -Unique
 }
 # retrieve all active firewall rules corresponding to the active connection profiles of the Windows FIrewall
 Function Get-ActiveFirewallRules {
